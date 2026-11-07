@@ -1,0 +1,217 @@
+.accessibilityBar {
+  background: #111827;
+  color: #ffffff;
+  padding: 0.35rem 1.5rem;
+  font-size: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.a11yControls {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.a11yBtn {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.75rem;
+  transition: background 0.2s;
+}
+
+.a11yBtn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.navbar {
+  background: #ffffff;
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.topBar {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0.85rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.brandLogo {
+  font-size: 1.6rem;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+  color: #111827;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.brandLogo span {
+  color: var(--primary-blue);
+}
+
+.searchWrapper {
+  flex: 1;
+  max-width: 520px;
+  position: relative;
+}
+
+.searchInput {
+  width: 100%;
+  background-color: #f3f4f6;
+  border: 1px solid transparent;
+  border-radius: 9999px;
+  padding: 0.65rem 1rem 0.65rem 2.6rem;
+  font-size: 0.9rem;
+  color: #374151;
+  outline: none;
+  transition: all 0.2s;
+}
+
+.searchInput:focus {
+  background-color: #ffffff;
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.searchIcon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9ca3af;
+  font-size: 0.9rem;
+}
+
+.userActions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+}
+
+.btnAnunciar {
+  background-color: var(--primary-green);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.825rem;
+  letter-spacing: 0.5px;
+  padding: 0.6rem 1.25rem;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: background-color 0.2s;
+}
+
+.btnAnunciar:hover {
+  background-color: var(--primary-green-hover);
+}
+
+.profileMenu {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: 8px;
+  background: none;
+  border: none;
+  text-align: left;
+}
+
+.avatarCircle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--primary-green);
+  color: #ffffff;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+}
+
+.profileInfo {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.greetingText {
+  font-size: 0.7rem;
+  color: #6b7280;
+}
+
+.accountName {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #111827;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.menuIcon {
+  margin-left: 0.5rem;
+  color: #4b5563;
+  font-size: 1.2rem;
+}
+
+/* MENU DROPDOWN "MINHA CONTA" CONFORME A FOTO ANEXA */
+.dropdownMenu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  width: 250px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  border: 1px solid var(--border-color);
+  padding: 0.5rem 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdownItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1.25rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #111827;
+  text-decoration: none;
+  transition: background-color 0.15s;
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+}
+
+.dropdownItem:hover {
+  background-color: #f3f4f6;
+}
+
+.dropdownIcon {
+  font-size: 1.1rem;
+  color: #374151;
+  width: 20px;
+  display: flex;
+  justify-content: center;
+}

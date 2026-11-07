@@ -1,0 +1,246 @@
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  width: 100%;
+}
+
+.categoryNav {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 0.75rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.catBtn {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #4b5563;
+  white-space: nowrap;
+  padding: 0.4rem 0.85rem;
+  border-radius: 9999px;
+  border: 1px solid transparent;
+  background: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.catBtn:hover {
+  background-color: #f3f4f6;
+  color: #111827;
+}
+
+.catActive {
+  background-color: #eff6ff !important;
+  color: #1d4ed8 !important;
+  border-color: #bfdbfe !important;
+  font-weight: 700;
+}
+
+.heroBanner {
+  background: linear-gradient(135deg, #2563eb 0%, #3b82f6 50%, #60a5fa 100%);
+  border-radius: var(--radius-lg);
+  color: #ffffff;
+  padding: 3rem 2.5rem;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.heroText {
+  max-width: 550px;
+  z-index: 2;
+}
+
+.heroTitle {
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 0.75rem;
+}
+
+.heroSubtitle {
+  font-size: 1.25rem;
+  font-weight: 400;
+  opacity: 0.95;
+  line-height: 1.4;
+}
+
+.heroGraphic {
+  position: absolute;
+  right: -20px;
+  bottom: -30px;
+  opacity: 0.25;
+  font-size: 14rem;
+  pointer-events: none;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.sectionTitle {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #111827;
+}
+
+.myListingsCard {
+  background: #ffffff;
+  border-radius: var(--radius-md);
+  padding: 2.5rem;
+  text-align: center;
+  border: 1px dashed #d1d5db;
+  margin-bottom: 2.5rem;
+}
+
+.emptyText {
+  color: #6b7280;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.btnCreate {
+  background-color: var(--primary-green);
+  color: #ffffff;
+  font-weight: 700;
+  padding: 0.65rem 1.25rem;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  display: inline-block;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.heartBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.85);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 5;
+  color: #6b7280;
+  font-size: 1rem;
+}
+
+.cardImageWrapper {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  background-color: #f3f4f6;
+  overflow: hidden;
+}
+
+.cardImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cardBody {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.tagRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.categoryTag {
+  font-size: 0.725rem;
+  font-weight: 700;
+  color: var(--primary-blue);
+  background-color: #eff6ff;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+}
+
+.ratingTag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #d97706;
+}
+
+.cardTitle {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 0.35rem;
+}
+
+.cardDesc {
+  font-size: 0.825rem;
+  color: #6b7280;
+  margin-bottom: 1.25rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.cardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #f3f4f6;
+  padding-top: 0.75rem;
+}
+
+.priceText {
+  font-size: 1.15rem;
+  font-weight: 900;
+  color: #111827;
+}
+
+.detailLink {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #4b5563;
+  border: 1px solid #d1d5db;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+}

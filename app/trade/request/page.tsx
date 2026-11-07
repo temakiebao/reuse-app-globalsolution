@@ -1,13 +1,13 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { Suspense, useEffect, useState } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import styles from '@/styles/trade.module.css';
 import formStyles from '@/styles/anunciar.module.css';
 import { getProductById, Product } from '@/lib/storage';
 
-export default function TradeRequestPage() {
+function TradeRequestContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const productId = searchParams.get('productId');
@@ -41,7 +41,6 @@ export default function TradeRequestPage() {
       </div>
 
       <div className={styles.twoColumns}>
-        {/* COLUNA 1: SEU ITEM */}
         <div className={styles.card}>
           <h2 className={styles.cardTitle}>1. Seu item para troca</h2>
           
@@ -84,7 +83,6 @@ export default function TradeRequestPage() {
           </div>
         </div>
 
-        {/* COLUNA 2: PRODUTO ALVO & CHAT */}
         <div className={styles.card}>
           <h2 className={styles.cardTitle}>2. Produto que você quer receber</h2>
 
@@ -133,5 +131,13 @@ export default function TradeRequestPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function TradeRequestPage() {
+  return (
+    <Suspense fallback={<div className={styles.container}>Carregando proposta de troca...</div>}>
+      <TradeRequestContent />
+    </Suspense>
   );
 }

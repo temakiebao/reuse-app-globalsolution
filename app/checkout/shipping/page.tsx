@@ -1,16 +1,17 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { Suspense, useState, useEffect } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import styles from '@/styles/shipping.module.css';
 import { getProductById, Product } from '@/lib/storage';
 
-export default function ShippingCheckoutPage() {
+function ShippingCheckoutContent() {
   const searchParams = useSearchParams();
   const productId = searchParams.get('productId');
   const mode = searchParams.get('mode') || 'buy';
   const [product, setProduct] = useState<Product | null>(null);
+
   const [step, setStep] = useState<1 | 2 | 3 | 4>(1);
   const [deliveryMethod, setDeliveryMethod] = useState<'correios' | 'public'>('correios');
   const [fullName, setFullName] = useState('Gustavo');
@@ -43,7 +44,6 @@ export default function ShippingCheckoutPage() {
         ← Voltar à tela anterior
       </Link>
 
-      {/* STEPPER HEADER (PASSO 1 A PASSO 4) */}
       <div className={styles.stepperHeader}>
         <div className={`${styles.stepItem} ${step >= 1 ? (step === 1 ? styles.stepActive : styles.stepCompleted) : ''}`}>
           <div className={styles.stepNumber}>{step > 1 ? '✓' : '1'}</div>
@@ -65,6 +65,7 @@ export default function ShippingCheckoutPage() {
           <span>Código e envio</span>
         </div>
       </div>
+
       <div className={styles.card}>
         {step === 1 && (
           <div>
@@ -116,6 +117,7 @@ export default function ShippingCheckoutPage() {
             </div>
           </div>
         )}
+
         {step === 2 && (
           <div>
             <h1 className={styles.title}>Para onde vamos enviar?</h1>
@@ -182,6 +184,7 @@ export default function ShippingCheckoutPage() {
             </div>
           </div>
         )}
+
         {step === 3 && (
           <div>
             <h1 className={styles.title}>Proteja seu hardware</h1>
@@ -221,6 +224,7 @@ export default function ShippingCheckoutPage() {
             </div>
           </div>
         )}
+
         {step === 4 && (
           <div style={{ textAlign: 'center' }}>
             <div className={styles.successIconCircle}>✓</div>
@@ -255,5 +259,13 @@ export default function ShippingCheckoutPage() {
         )}
       </div>
     </div>
+  );
+}
+
+export default function ShippingCheckoutPage() {
+  return (
+    <Suspense fallback={<div className={styles.container}>Carregando opções de frete...</div>}>
+      <ShippingCheckoutContent />
+    </Suspense>
   );
 }

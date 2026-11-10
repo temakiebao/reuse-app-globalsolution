@@ -1,24 +1,30 @@
-# ReUse - Atualização Completa de Frete, Categorias e Acessibilidade
+Integrantes
 
-Esta versão do **ReUse** inclui todas as novas solicitações implementadas:
+    Gustavo Galvão – RM: 565969
+    Lucas Tamura – RM: 563249
 
-1. **Fluxo de Frete em 4 Passos (`/checkout/shipping`):**
-   - Passo 1: Modalidade ("Como será realizada a entrega?")
-   - Passo 2: Dados do destino ("Para onde vamos enviar?")
-   - Passo 3: Fotos da embalagem ("Proteja seu hardware")
-   - Passo 4: Código e envio ("Sua troca/compra está preparada!")
-   - Acessível tanto ao clicar em "Comprar este produto" quanto após o aceite da troca.
+Desafio
 
-2. **Navegação por Categorias Funcional:**
-   - Abas "Todos", "Computadores", "Placas de Vídeo", "Video Games", "Memórias e Armazenamento", "Processadores" e "Periféricos" filtram os anúncios instantaneamente ao clicar.
+Apresentação do que já foi feito, a sua importância e principalmente demonstrando a integração e funcionamento na plataforma para essa entrega final.
 
-3. **Menu Dropdown de Usuário "Minha conta":**
-   - Réplica fiel da imagem anexa contendo: `Meus favoritos (0)`, `Meus anúncios`, `Jornada de compra`, `Entrar ou criar conta` e `Falar com Watson`.
+React NextJS, Prisma e Vercel
 
-4. **Anúncios Fidedignos aos Títulos:**
-   - Imagens reais de GPUs, RAMs, Processadores, Gabinetes Gamer e Consoles correspondentes de forma precisa ao título do produto.
+Hospedagem
 
-5. **Recursos de Acessibilidade:**
-   - Barra superior com botões de ajuste de fonte (A+ e A-) e modo de **Alto Contraste**.
-   - Tipografia limpa baseada em `Inter` e `Gill Sans`.
-   - Foco visual acessível nos elementos da interface.
+https://reuse-app-globalsolution.vercel.app/
+
+INSTRUÇÕES PARA AQUELES QUE QUEREM RODAR O PROJETO PURO
+
+Siga estas instruções simples para configurar o ambiente e testar a plataforma:
+
+1 - Clone o repositório no terminal
+
+2 - Instale as dependências no terminal do VS Code:
+
+"npm install"
+
+3 - Sincronize o banco de dados: npx prisma generate npx prisma db push
+
+4 - Inicie o servidor de desenvolvimento: npm run dev
+
+5 - Acesse a plataforma: Acesse http://localhost:3000 para navegar pelo ReUse.

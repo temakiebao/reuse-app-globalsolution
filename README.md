@@ -13,6 +13,10 @@ Hospedagem
 
 https://reuse-app-globalsolution.vercel.app/
 
+Youtube Link
+
+https://www.youtube.com/watch?v=PVRw2uxKPYQ
+
 INSTRUÇÕES PARA AQUELES QUE QUEREM RODAR O PROJETO PURO
 
 Siga estas instruções simples para configurar o ambiente e testar a plataforma:
